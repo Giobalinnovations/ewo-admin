@@ -1,4 +1,3 @@
-
 export interface ICategoryItem {
   _id: string;
   img: string;
@@ -23,6 +22,9 @@ export interface IAddCategory {
   productType: string;
   description?: string;
 }
+export interface IAddBlogCategory {
+  parent: string;
+}
 
 export interface IAddCategoryResponse {
   status: string;
@@ -38,9 +40,15 @@ export interface IAddCategoryResponse {
   };
 }
 
+export interface IAddBlogCategoryResponse {
+  status: string;
+  message: string;
+  data: {
+    parent: string;
+  };
+}
+
 export interface ICategoryDeleteRes {
   success?: boolean;
   message?: string;
 }
-
-

@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import useCategorySubmit from "@/hooks/useCategorySubmit";
-import ProductType from "../products/add-product/product-type";
-import CategoryTables from "./category-tables";
-import CategoryImgUpload from "./global-img-upload";
-import CategoryChildren from "./category-children";
-import CategoryParent from "./category-parent";
-import CategoryDescription from "./category-description";
+'use client';
+import React from 'react';
+import useCategorySubmit from '@/hooks/useCategorySubmit';
+import ProductType from '../products/add-product/product-type';
+import CategoryTables from './category-tables';
+import CategoryImgUpload from './global-img-upload';
+import CategoryChildren from './category-children';
+import CategoryParent from './category-parent';
+import CategoryDescription from './category-description';
 
 const AddCategory = () => {
   const {
@@ -28,7 +28,7 @@ const AddCategory = () => {
     <div className="grid grid-cols-12 gap-6">
       <div className="col-span-12 lg:col-span-4">
         <form onSubmit={handleSubmit(handleSubmitCategory)}>
-          <div className="mb-6 bg-white px-8 py-8 rounded-md">
+          <div className="px-8 py-8 mb-6 bg-white rounded-md">
             {/* category image upload */}
             <CategoryImgUpload
               isSubmitted={isSubmitted}
@@ -64,7 +64,7 @@ const AddCategory = () => {
             <CategoryDescription register={register} />
             {/* Category Description */}
 
-            <button className="tp-btn px-7 py-2">Add Category</button>
+            <button className="py-2 tp-btn px-7">Add Category</button>
           </div>
         </form>
       </div>
